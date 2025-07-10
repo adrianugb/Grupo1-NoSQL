@@ -9,6 +9,8 @@ const bodyParse = require('body-parser');
 
 const RouterCurso = require('./routers/CursoRourtes');
 const RouterEstudiantes = require('./routers/EstudiantesRourtes');
+const RouterAdministrador = require('./routers/AdministradoresRoutes');
+
 //asginas rutas
 //variables para el https o web
 const cors = require('cors');
@@ -33,6 +35,8 @@ app.use(bodyParse.json());
 //Rutas del api
 app.use('/api/cursos', RouterCurso)
 app.use('/api/estudiantes', RouterEstudiantes)
+app.use('/api/administradores', RouterAdministrador);
+
 
 //Ocupamos el servidor funcional
 app.listen(PORT, ()=> {
