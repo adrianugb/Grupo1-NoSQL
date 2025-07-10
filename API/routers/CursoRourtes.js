@@ -63,14 +63,4 @@ router.delete('/:id', async(req, res) =>{
         }
     }
 );
-
-
 module.exports = router;
-
-
-// {
-//  "id": 123,
-// "nombre": "NoSQL",
-// "descripcion": "Curso de base de datos no relacionales.",
-// "estado": "Activo"
-// }
