@@ -5,7 +5,8 @@ const EstudiantesSchema = new mongoose.Schema(
         //id: { type: Number, required: true, unique: true},
         id: { type: Number},
         nombre: { type: String},
-        curso: { type: String},
+        carrera: { type: String},
+        cuatrimestre: { type: String},
 	    correo: { type: String},
         estado: { type: String}
     }
