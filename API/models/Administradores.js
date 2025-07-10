@@ -5,9 +5,8 @@ const AdministradoresSchema = new mongoose.Schema(
         //id: { type: Number, required: true, unique: true},
         id: { type: Number},
         nombre: { type: String},
-        especialidad: { type: String},
-        correo: { type: String},
-        estado: { type: String}
+        fecha_registro: { type: Date, default: Date.now }
+       
     }
 );
 
