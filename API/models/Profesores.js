@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 
 const ProfesoresSchema = new mongoose.Schema(
     {
-        //id: { type: Number, required: true, unique: true},
         id: { type: Number},
         nombre: { type: String},
-        especialidad: { type: String},
-	    correo: { type: String},
-        estado: { type: String}
+        correo: { type: String},
+	    cursos_impartidos: { type: String},
+        departamento: { type: String},
+        fecha_registro: { type: Date}
     }
 );
 
