@@ -8,13 +8,10 @@ const mongoose = require('mongoose');
 const bodyParse = require('body-parser');
 
 const RouterCurso = require('./routers/CursoRourtes');
-<<<<<<< Updated upstream
 const RouterEstudiantes = require('./routers/EstudiantesRourtes');
-=======
-const RouterAdministrador = require('./routers/AdministradoresRouters');
+const RouterTutores = require('./routers/TutoresRourters');
+const RouterAdministradores = require('./routers/AdministradoresRouters');
 
-
->>>>>>> Stashed changes
 //asginas rutas
 //variables para el https o web
 const cors = require('cors');
@@ -38,12 +35,9 @@ app.use(bodyParse.json());
 
 //Rutas del api
 app.use('/api/cursos', RouterCurso)
-<<<<<<< Updated upstream
 app.use('/api/estudiantes', RouterEstudiantes)
-=======
-app.use('/api/administradores', RouterAdministrador);
-
->>>>>>> Stashed changes
+app.use('/api/tutores', RouterTutores)
+app.use('/api/administradores', RouterAdministradores)
 
 //Ocupamos el servidor funcional
 app.listen(PORT, ()=> {
