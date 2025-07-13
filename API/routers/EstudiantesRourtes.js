@@ -1,4 +1,3 @@
-//Declarar nuestra librerias
 const express = require('express');
 const router = express.Router();
 const Estudiantes = require('../models/Estudiantes');
@@ -46,7 +45,6 @@ router.put('/:id', async(req, res) =>{
         }
     }
 );
-//Obtener 
 router.delete('/:id', async(req, res) =>{
         const dato = await Estudiantes.findOneAndDelete({id: req.params.id});
         if (dato) {

@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 
 const EstudiantesSchema = new mongoose.Schema(
     {
-        //id: { type: Number, required: true, unique: true},
-        id: { type: Number},
-        nombre: { type: String},
-        carrera: { type: String},
-        cuatrimestre: { type: String},
-	    correo: { type: String},
-        estado: { type: String}
+        id: { type: Number,required: true,unique: true},
+        nombre: { type: String, required: true,trim: true},
+        carrera: { type: String, required: true,trim: true},
+        cuatrimestre: { type: String, required: true,trim: true},
+	    correo: { type: String, required: true, unique: true, lowercase: true,trim: true},
+        fecha_registro: { type: Date, default: Date.now },
+        activo: { type: Boolean,default: true}
     }
 );
 
