@@ -11,8 +11,7 @@ const TutoriasSchema = new mongoose.Schema(
     modalidad: { type: String, required: true, enum: ['virtual', 'presencial'], trim: true },
     estado: { type: String, required: true, enum: ['pendiente', 'completada', 'cancelada'], trim: true },
     activo: { type: Boolean, default: true }
-  },
-  { versionKey: false }
+  }
 );
 
 module.exports = mongoose.model('Tutorias', TutoriasSchema);

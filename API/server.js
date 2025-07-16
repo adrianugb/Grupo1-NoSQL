@@ -8,6 +8,7 @@ const RouterEstudiantes = require('./routers/EstudiantesRourtes');
 const RouterTutores = require('./routers/TutoresRourters');
 const RouterAdministradores = require('./routers/AdministradoresRouters');
 const RouterProfesores = require('./routers/ProfesoresRourtes');
+const RouterMetricas = require('./routers/MetricasRourtes');
 
 const cors = require('cors');
 const app = express();
@@ -25,6 +26,9 @@ app.use('/api/estudiantes', RouterEstudiantes)
 app.use('/api/tutores', RouterTutores)
 app.use('/api/administradores', RouterAdministradores)
 app.use('/api/profesores', RouterProfesores)
+app.use('/api/metricas', RouterMetricas)
+
+
 app.listen(PORT, ()=> {
        console.log(`Servidor corriendo http://localhost:${PORT}`);
 

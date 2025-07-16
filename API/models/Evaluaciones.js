@@ -9,8 +9,7 @@ const EvaluacionesSchema = new mongoose.Schema(
     nota: { type: Number, required: true },
     fecha: { type: Date, default: Date.now },
     activo: { type: Boolean, default: true }
-  },
-  { versionKey: false }
+  }
 );
 
 module.exports = mongoose.model('Evaluaciones', EvaluacionesSchema);
