@@ -31,13 +31,15 @@ router.get('/:id', async(req, res) =>{
         }
     }
 );
-router.get('/:id', async(req, res) =>{
-        const listaDatos = await Notificaciones.findOne({id: req.params.id});
-        if (listaDatos) {
-            res.json(listaDatos);
+router.put('/:id', async(req, res) =>{
+        const dato = await Notificaciones.findOneAndUpdate({
+                id: req.params.id}, req.body, {new: true                
+            });
+        if (dato){
+            res.json(dato);
         }
         else{
-            res.status(404).json({error: "No se encontro el elemento"});
+            res.status(404).json({error: "No se encontro el elemento para actualizar"});
         }
     }
 );
