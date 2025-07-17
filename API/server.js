@@ -11,6 +11,9 @@ const RouterProfesores = require('./routers/ProfesoresRourtes');
 const RouterMetricas = require('./routers/MetricasRourtes');
 const RouterNotificaciones = require('./routers/NotificacionesRouter');
 const RouterSolicitudesTutoria = require('./routers/SolicitudesTutoriaRoutes');
+const RouterRetroalimentaciones = require('./routers/RetroalimentacionesRourtes');
+const RouterHorariosDisponibles = require('./routers/HorariosDisponiblesRouters');
+
 
 const cors = require('cors');
 const app = express();
@@ -31,6 +34,9 @@ app.use('/api/profesores', RouterProfesores)
 app.use('/api/metricas', RouterMetricas)
 app.use('/api/notificaciones', RouterNotificaciones)
 app.use('/api/solicitudes-tutoria', RouterSolicitudesTutoria)
+app.use('/api/retroalimentaciones', RouterRetroalimentaciones);
+app.use('/api/horarios', RouterHorariosDisponibles);
+
 
 
 app.listen(PORT, ()=> {
