@@ -5,11 +5,12 @@ const bodyParse = require('body-parser');
 
 const RouterCurso = require('./routers/CursoRourtes');
 const RouterEstudiantes = require('./routers/EstudiantesRourtes');
-const RouterTutores = require('./routers/TutoresRourters');
+const RouterTutores = require('./routers/TutoresRouters');
 const RouterAdministradores = require('./routers/AdministradoresRourtes');
 const RouterProfesores = require('./routers/ProfesoresRourtes');
 const RouterMetricas = require('./routers/MetricasRourtes');
-const RouterNotificaciones = require('./routers/NotificacionesRourtes');
+const RouterNotificaciones = require('./routers/NotificacionesRouter');
+const RouterSolicitudesTutoria = require('./routers/SolicitudesTutoriaRoutes');
 
 const cors = require('cors');
 const app = express();
@@ -29,6 +30,7 @@ app.use('/api/administradores', RouterAdministradores)
 app.use('/api/profesores', RouterProfesores)
 app.use('/api/metricas', RouterMetricas)
 app.use('/api/notificaciones', RouterNotificaciones)
+app.use('/api/solicitudes-tutoria', RouterSolicitudesTutoria)
 
 
 app.listen(PORT, ()=> {
