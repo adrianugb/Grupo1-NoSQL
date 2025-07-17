@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const SolicitudesTutoriaSchema = new mongoose.Schema(
     {
-        _id: {type: Number,required: true,unique: true},
+        //_id: {type: Number,required: true,unique: true},
         estudiante_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Estudiantes', required: true },
         curso_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Curso', required: true },
         fecha_solicitada: { type: Date, required: true },
