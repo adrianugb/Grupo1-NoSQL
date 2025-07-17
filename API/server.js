@@ -9,6 +9,7 @@ const RouterTutores = require('./routers/TutoresRouters');
 const RouterAdministradores = require('./routers/AdministradoresRourtes');
 const RouterProfesores = require('./routers/ProfesoresRourtes');
 const RouterMetricas = require('./routers/MetricasRourtes');
+const RouterEvaluaciones = require('./routers/EvaluacionesRourtes');
 const RouterNotificaciones = require('./routers/NotificacionesRouter');
 const RouterSolicitudesTutoria = require('./routers/SolicitudesTutoriaRoutes');
 const RouterRetroalimentaciones = require('./routers/RetroalimentacionesRourtes');
@@ -32,6 +33,7 @@ app.use('/api/tutores', RouterTutores)
 app.use('/api/administradores', RouterAdministradores)
 app.use('/api/profesores', RouterProfesores)
 app.use('/api/metricas', RouterMetricas)
+app.use('/api/evaluaciones', RouterEvaluaciones)
 app.use('/api/notificaciones', RouterNotificaciones)
 app.use('/api/solicitudes-tutoria', RouterSolicitudesTutoria)
 app.use('/api/retroalimentaciones', RouterRetroalimentaciones);
