@@ -13,11 +13,12 @@ router.post('/', async (req, res) => {
     }
 });
 
- 
+
 router.get('/', async (req, res) => {
     const listaAdministradores = await Administrador.find();
     res.json(listaAdministradores);
 });
+
 
 router.get('/:id', async (req, res) => {
     const administrador = await Administrador.findOne({ id: req.params.id });

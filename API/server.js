@@ -4,10 +4,10 @@ const mongoose = require('mongoose');
 const bodyParse = require('body-parser');
 
 const RouterCurso = require('./routers/CursoRourtes');
-const RouterEstudiantes = require('./routers/EstudiantesRourtes');
-const RouterTutores = require('./routers/TutoresRouters');
-const RouterAdministradores = require('./routers/AdministradoresRourtes');
-const RouterProfesores = require('./routers/ProfesoresRourtes');
+const RouterEstudiantes = require('./routers/EstudiantesRourtes'); // Adrian
+const RouterTutores = require('./routers/TutoresRouters');         // geovanny
+const RouterAdministradores = require('./routers/AdministradoresRourtes');  // edcelth
+const RouterProfesores = require('./routers/ProfesoresRourtes');   
 const RouterMetricas = require('./routers/MetricasRourtes');
 const RouterEvaluaciones = require('./routers/EvaluacionesRourtes');
 const RouterNotificaciones = require('./routers/NotificacionesRouter');
